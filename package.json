@@ -30,6 +30,7 @@
 	},
 	"packageManager": "yarn@3.4.1",
 	"dependencies": {
+		"@astrojs/sitemap": "^1.1.0",
 		"@julian_cataldo/astro-resets": "^0.12.6",
 		"astro": "^2.0.15"
 	},

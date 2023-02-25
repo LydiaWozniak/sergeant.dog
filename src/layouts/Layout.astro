@@ -24,36 +24,46 @@ const { title } = Astro.props;
 			borderBox={true}
 			scrollBarKeep={true}
 		/>
+
+		<style is:inline>
+			@font-face {
+				font-family: 'BrutalType';
+				src: url('/fonts/BrutalType-Bold.woff2') format('woff2');
+				font-weight: bold;
+				font-style: normal;
+				font-display: swap;
+			}
+
+			:root {
+				--bg-primary: #0b0c0f;
+				--text-primary: #f2f4fb;
+				--text-secondary: #3a3f42;
+				--text-link: #697077;
+			}
+
+			html {
+				font-size: 1.2em;
+				font-family: system-ui, sans-serif;
+				background-color: var(--bg-primary);
+			}
+
+			html, body {
+				min-width: 100vw;
+				min-height: 100vh;
+				overflow: unset;
+			}
+		</style>
 	</head>
-	<body>
+	<body style="opacity: 0;">
+		<script is:inline>
+			const cb = () => {document.body.style.opacity = '1';}
+			if (document.readyState === 'interactive' || document.readyState === 'complete') {
+				cb()
+			} else {
+				document.addEventListener('DOMContentLoaded', cb);
+			}
+		</script>
 		<slot />
 	</body>
+	<noscript><style is:inline>body { opacity: 1; }</style></noscript>
 </html>
-<style is:global>
-	@font-face {
-		font-family: 'BrutalType';
-		src: url('/fonts/BrutalType-Bold.woff2') format('woff2');
-		font-weight: bold;
-		font-style: normal;
-		font-display: swap;
-	}
-
-	:root {
-		--bg-primary: #0b0c0f;
-		--text-primary: #f2f4fb;
-		--text-secondary: #3a3f42;
-		--text-link: #697077;
-	}
-
-	html {
-		font-size: 1.2em;
-		font-family: system-ui, sans-serif;
-		background-color: var(--bg-primary);
-	}
-
-	html, body {
-		min-width: 100vw;
-		min-height: 100vh;
-		overflow: unset;
-	}
-</style>
