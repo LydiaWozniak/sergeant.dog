@@ -1,3 +1,7 @@
 {
-  "extends": "astro/tsconfigs/strictest"
+  "extends": "@braden1996/tsconfig/base",
+  "compilerOptions": {
+    "skipLibCheck": true
+  },
+  "include": ["./src"]
 }
