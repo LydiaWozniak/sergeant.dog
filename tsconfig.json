@@ -1,7 +1,30 @@
 {
-  "extends": "@braden1996/tsconfig/base",
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Default",
   "compilerOptions": {
+    "composite": false,
+    "lib": ["ESNext"],
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "inlineSources": false,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noErrorTruncation": true,
+    "preserveWatchOutput": true,
+    "pretty": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "isolatedModules": true,
+    "importsNotUsedAsValues": "error",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
     "skipLibCheck": true
   },
-  "include": ["./src"]
+  "include": ["./src"],
+  "exclude": [
+    "node_modules"
+  ]
 }

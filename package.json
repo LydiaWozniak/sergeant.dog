@@ -37,7 +37,6 @@
 		"astro": "^2.0.15"
 	},
 	"devDependencies": {
-		"@braden1996/tsconfig": "0.0.2",
 		"@typescript-eslint/parser": "^5.53.0",
 		"cspell": "^6.26.3",
 		"eslint": "8.32.0",

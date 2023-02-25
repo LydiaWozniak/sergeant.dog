@@ -396,13 +396,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@braden1996/tsconfig@npm:0.0.2":
-  version: 0.0.2
-  resolution: "@braden1996/tsconfig@npm:0.0.2"
-  checksum: b1d94a673eded83aa93578df3c6dc6c8822bb84afe77aee14af4c999a99ba8148c9f883e6b534ce064567d66f53562344f68b916a7a99430c234f2f99244e465
-  languageName: node
-  linkType: hard
-
 "@cspell/cspell-bundled-dicts@npm:6.26.3":
   version: 6.26.3
   resolution: "@cspell/cspell-bundled-dicts@npm:6.26.3"
@@ -1952,7 +1945,6 @@ __metadata:
   resolution: "bradenm.co.uk@workspace:."
   dependencies:
     "@astrojs/sitemap": ^1.1.0
-    "@braden1996/tsconfig": 0.0.2
     "@julian_cataldo/astro-resets": ^0.12.6
     "@typescript-eslint/parser": ^5.53.0
     astro: ^2.0.15
