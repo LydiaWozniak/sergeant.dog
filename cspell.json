@@ -14,7 +14,8 @@
   "astro",
   "noscript",
   "Braden",
-  "attio"
+  "attio",
+  "crossorigin"
 ],
 "ignoreWords": [],
 "import": []
