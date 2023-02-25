@@ -1,0 +1,21 @@
+{
+"version": "0.2",
+"ignorePaths": [
+  "package.json",
+  "dist/*",
+  "node_modules/*"
+],
+"ignoreRegExpList": [
+  "/from\\s+(['\"]).*\\1/"
+],
+"dictionaryDefinitions": [],
+"dictionaries": [],
+"words": [
+  "astro",
+  "noscript",
+  "Braden",
+  "attio"
+],
+"ignoreWords": [],
+"import": []
+}

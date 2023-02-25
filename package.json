@@ -21,10 +21,12 @@
 		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"test": "yarn run test-typescript",
-		"test-typescript": "tsc --noEmit",
-		"lint": "eslint ./src",
-		"lint-fix": "yarn run lint --fix",
+		"test": "astro check",
+		"lint": "yarn run prettier-eslint --list-different && yarn run eslint",
+		"lint-prettier": "yarn run prettier --write",
+		"prettier": "prettier-eslint \"src/**/*.{js,astro,ts,tsx}\"",
+		"eslint": "eslint \"src/**/*.{js,astro,ts,tsx}\"",
+		"spellcheck": "cspell \"**/*.{js,astro}\" --no-must-find-files",
 		"clean": "rm -rf ./dist",
 		"clean-node-modules": "rm -rf **/node_modules"
 	},
@@ -36,12 +38,14 @@
 	},
 	"devDependencies": {
 		"@braden1996/tsconfig": "0.0.2",
+		"@typescript-eslint/parser": "^5.53.0",
+		"cspell": "^6.26.3",
 		"eslint": "8.32.0",
-		"eslint-config-braden1996": "0.0.1",
+		"eslint-plugin-astro": "^0.23.0",
+		"eslint-plugin-jsx-a11y": "^6.7.1",
 		"prettier": "^2.8.3",
+		"prettier-eslint-cli": "^7.1.0",
+		"prettier-plugin-astro": "^0.8.0",
 		"typescript": "~4.9.5"
-	},
-	"eslintConfig": {
-		"extends": "eslint-config-braden1996/default"
 	}
 }

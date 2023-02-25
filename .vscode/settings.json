@@ -4,19 +4,21 @@
   "eslint.packageManager": "yarn",
   "eslint.validate": [
     "javascript",
-    "typescript",
+    "javascriptreact",
     "astro",
+    "typescript",
+    "typescriptreact"
   ],
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[astro]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 }
