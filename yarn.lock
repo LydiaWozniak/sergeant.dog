@@ -1607,7 +1607,7 @@ __metadata:
     "@julian_cataldo/astro-resets": ^0.12.6
     astro: ^2.0.15
     eslint: 8.32.0
-    eslint-config-braden1996: /Users/braden/Development/eslint-config
+    eslint-config-braden1996: 0.0.1
     prettier: ^2.8.3
     typescript: ~4.9.5
   languageName: unknown
@@ -2370,9 +2370,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-braden1996@file:/Users/braden/Development/eslint-config::locator=bradenm.co.uk%40workspace%3A.":
+"eslint-config-braden1996@npm:0.0.1":
   version: 0.0.1
-  resolution: "eslint-config-braden1996@file:/Users/braden/Development/eslint-config#/Users/braden/Development/eslint-config::hash=243055&locator=bradenm.co.uk%40workspace%3A."
+  resolution: "eslint-config-braden1996@npm:0.0.1"
   dependencies:
     "@remix-run/eslint-config": ^1.13.0
     "@typescript-eslint/eslint-plugin": ^5.52.0
@@ -2395,7 +2395,7 @@ __metadata:
   peerDependenciesMeta:
     prettier:
       optional: true
-  checksum: d663480cd95a38f2aeffcf19d0113338d4a5430e2703141120cc0ac412edf2be14fe8416e92052a1ab24bf39783d7305515260a9591140de73d050cdde98f621
+  checksum: a6803580118be439ef4253d93c69d71d71fdf937bb96a5ab5d53d7fd5d3561a2b9ad1de9873510315d7b36e7098915673929b01b8ee3298d2ecdf8f0113015b5
   languageName: node
   linkType: hard
 
