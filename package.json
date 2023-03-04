@@ -17,7 +17,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "prettier-eslint \"{src,types}/**/*.{js,ts,tsx}\" \"./next.config.js\"",
+    "lint": "prettier-eslint --list-different \"{src,types}/**/*.{js,ts,tsx}\" \"./next.config.js\"",
     "lint-fix": "yarn run lint --write",
     "typecheck": "tsc --noEmit",
     "spellcheck": "cspell \"**/*.{js,ts,tsx}\" --no-must-find-files"
