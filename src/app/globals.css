@@ -1,0 +1,23 @@
+:root {
+  --bg-primary: #0b0c0f;
+  --text-primary: #f2f4fb;
+  --text-secondary: #3a3f42;
+  --text-link: #697077;
+}
+html {
+  font-size: 1.2em;
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg-primary);
+}
+html,
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: unset;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

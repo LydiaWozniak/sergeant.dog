@@ -1,0 +1,44 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    text-align: center;
+  }
+}
+
+.textCaption {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  padding: 0 0.15rem;
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+.textCaption > a {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+.textCaption > a:hover {
+  color: var(--text-link);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.textName {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+  font-family: var(--font-brutal-type), system-ui, sans-serif;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}

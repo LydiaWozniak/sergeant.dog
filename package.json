@@ -1,50 +1,40 @@
 {
-	"name": "bradenm.co.uk",
-	"type": "module",
-	"version": "0.0.0",
-	"engines": {
-		"node": "16.19.x"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/braden1996/bradenm.co.uk.git"
-	},
-	"author": "Braden Marshall <braden1996@hotmail.co.uk>",
-	"license": "MIT",
-	"homepage": "https://github.com/braden1996/bradenm.co.uk",
-	"bugs": {
-		"url": "https://github.com/braden1996/bradenm.co.uk/issues"
-	},
-	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro build",
-		"preview": "astro preview",
-		"astro": "astro",
-		"test": "astro check",
-		"lint": "yarn run prettier-eslint --list-different && yarn run eslint",
-		"lint-prettier": "yarn run prettier --write",
-		"prettier": "prettier-eslint \"src/**/*.{js,astro,ts,tsx}\"",
-		"eslint": "eslint \"src/**/*.{js,astro,ts,tsx}\"",
-		"spellcheck": "cspell \"**/*.{js,astro}\" --no-must-find-files",
-		"clean": "rm -rf ./dist",
-		"clean-node-modules": "rm -rf **/node_modules"
-	},
-	"packageManager": "yarn@3.4.1",
-	"dependencies": {
-		"@astrojs/sitemap": "^1.1.0",
-		"@julian_cataldo/astro-resets": "^0.12.6",
-		"astro": "^2.0.15"
-	},
-	"devDependencies": {
-		"@typescript-eslint/parser": "^5.52.0",
-		"cspell": "^6.26.3",
-		"eslint": "8.32.0",
-		"eslint-plugin-astro": "^0.23.0",
-		"eslint-plugin-jsx-a11y": "^6.7.1",
-		"prettier": "^2.8.3",
-		"prettier-eslint-cli": "^7.1.0",
-		"prettier-plugin-astro": "^0.8.0",
-		"typescript": "~4.9.5"
-	}
+  "name": "bradenm.co.uk",
+  "version": "0.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/braden1996/bradenm.co.uk.git"
+  },
+  "author": "Braden Marshall <braden1996@hotmail.co.uk>",
+  "license": "MIT",
+  "homepage": "https://github.com/braden1996/bradenm.co.uk",
+  "bugs": {
+    "url": "https://github.com/braden1996/bradenm.co.uk/issues"
+  },
+  "packageManager": "yarn@3.4.1",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "spellcheck": "cspell \"**/*.{js,ts,tsx}\" --no-must-find-files"
+  },
+  "dependencies": {
+    "clsx": "1.2.1",
+    "next": "13.2.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "the-new-css-reset": "^1.8.4"
+  },
+  "devDependencies": {
+    "@types/node": "18.14.6",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "cspell": "^6.28.0",
+    "eslint": "8.35.0",
+    "eslint-config-next": "13.2.3",
+    "typescript": "4.9.5"
+  }
 }

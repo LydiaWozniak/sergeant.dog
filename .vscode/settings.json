@@ -5,7 +5,6 @@
   "eslint.validate": [
     "javascript",
     "javascriptreact",
-    "astro",
     "typescript",
     "typescriptreact"
   ],
@@ -18,7 +17,5 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[astro]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }

@@ -31,14 +31,11 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
 
-      - name: Test
-        run: yarn run test
+      - name: Typecheck
+        run: yarn run typecheck
 
       - name: Lint
         run: yarn run lint
 
       - name: Spellcheck
         run: yarn run spellcheck
-
-      - name: Build
-        run: yarn run build
