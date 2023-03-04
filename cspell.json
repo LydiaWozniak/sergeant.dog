@@ -17,7 +17,9 @@
     "noscript",
     "Braden",
     "attio",
-    "clsx"
+    "clsx",
+    "fortawesome",
+    "fontawesome"
   ],
   "ignoreWords": []
 }

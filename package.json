@@ -20,7 +20,8 @@
     "lint": "prettier-eslint --list-different \"{src,types}/**/*.{js,ts,tsx}\" \"./next.config.js\"",
     "lint-fix": "yarn run lint --write",
     "typecheck": "tsc --noEmit",
-    "spellcheck": "cspell \"**/*.{js,ts,tsx}\" --no-must-find-files"
+    "spellcheck": "cspell \"**/*.{js,ts,tsx}\" --no-must-find-files",
+    "check": "yarn run typecheck && yarn run lint && yarn run spellcheck"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
