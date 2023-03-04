@@ -3,6 +3,8 @@
   --text-primary: #f2f4fb;
   --text-secondary: #3a3f42;
   --text-link: #697077;
+  --brand-twitter: #00acee;
+  --brand-linkedin: #0072b1;
 }
 html {
   font-size: 1.2em;

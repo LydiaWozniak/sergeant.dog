@@ -7,12 +7,6 @@
   flex-direction: column;
 }
 
-@media only screen and (max-width: 600px) {
-  .header {
-    text-align: center;
-  }
-}
-
 .textCaption {
   color: var(--text-secondary);
   font-size: 1rem;
@@ -41,4 +35,38 @@
   font-family: var(--font-brutal-type), system-ui, sans-serif;
   color: var(--text-primary);
   text-transform: uppercase;
+}
+
+.captionContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.25rem;
+}
+
+.socialLink {
+  color: var(--text-secondary);
+  transition: color 0.3s ease-in-out;
+}
+.socialLink.twitter:hover {
+  color: var(--brand-twitter);
+}
+.socialLink.gitHub:hover {
+  color: var(--text-link);
+}
+.socialLink.linkedIn:hover {
+  color: var(--brand-linkedin);
+}
+
+
+@media only screen and (max-width: 600px) {
+  .header {
+    text-align: center;
+  }
+
+  .captionContainer {
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
 }

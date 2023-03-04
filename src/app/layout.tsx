@@ -4,6 +4,9 @@ import "the-new-css-reset/css/reset.css";
 import localFont from 'next/font/local'
 import { Inter } from 'next/font/google'
 
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
 
 const interFont = Inter({
   subsets: ['latin'],
