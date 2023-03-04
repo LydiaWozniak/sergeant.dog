@@ -56,16 +56,9 @@ const { title } = Astro.props;
   </head>
 
   <body style="opacity: 0;">
-    <script is:inline>
-      const cb = () => {
-        document.body.style.opacity = '1';
-      };
-
-      if (document.readyState === 'interactive' || document.readyState === 'complete') {
-        cb();
-      } else {
-        document.addEventListener('DOMContentLoaded', cb);
-      }
+    <script>
+      import { displayWhenReady } from '../utils/display-when-ready';
+      displayWhenReady();
     </script>
 
     <slot />

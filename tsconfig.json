@@ -3,7 +3,10 @@
   "display": "Default",
   "compilerOptions": {
     "composite": false,
-    "lib": ["ESNext"],
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
     "declaration": true,
     "declarationMap": true,
     "esModuleInterop": true,
@@ -23,7 +26,9 @@
     "noImplicitReturns": true,
     "skipLibCheck": true
   },
-  "include": ["./src"],
+  "include": [
+    "./src"
+  ],
   "exclude": [
     "node_modules"
   ]
