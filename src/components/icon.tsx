@@ -11,12 +11,12 @@ const icons = {
 };
 
 interface IconProps
-	extends Pick<FontAwesomeIconProps, "size" | "color" | "fixedWidth"> {
+	extends Pick<FontAwesomeIconProps, "size"> {
 	icon: keyof typeof icons;
 }
 
-export function Icon({ icon, fixedWidth = true, ...rest }: IconProps) {
+export function Icon({ icon, ...rest }: IconProps) {
 	return (
-		<FontAwesomeIcon icon={icons[icon]} fixedWidth={fixedWidth} {...rest} />
+		<FontAwesomeIcon icon={icons[icon]} {...rest} />
 	);
 }

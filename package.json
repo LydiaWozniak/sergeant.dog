@@ -17,7 +17,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "prettier-eslint \"{src,types}/**/*.{js,ts,tsx}\" \"./next.config.js\"",
+    "lint-fix": "yarn run lint --write",
     "typecheck": "tsc --noEmit",
     "spellcheck": "cspell \"**/*.{js,ts,tsx}\" --no-must-find-files"
   },
@@ -40,6 +41,7 @@
     "cspell": "^6.28.0",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
+    "prettier-eslint-cli": "^7.1.0",
     "typescript": "4.9.5"
   }
 }
