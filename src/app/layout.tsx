@@ -13,8 +13,10 @@ const interFont = Inter({
   variable: "--font-inter",
 });
 
+// This font subset only includes the characters necessary to
+// spell "Braden Marshall".
 const brutalTypeFont = localFont({
-  src: "../../public/fonts/BrutalType-Bold.woff2",
+  src: "../../public/fonts/BrutalType-Bold.FontimizeSubset.woff2",
   variable: "--font-brutal-type",
 });
 
