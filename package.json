@@ -16,11 +16,13 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "prettier-eslint --list-different \"{src,types}/**/*.{js,ts,tsx}\" \"./next.config.js\" \"./.eslintrc.js\"",
+    "lint": "oxlint --import-plugin --jsx-a11y-plugin --nextjs-plugin --react-perf-plugin",
     "lint-fix": "bun run lint --write",
-    "typecheck": "tsc --noEmit",
-    "spellcheck": "cspell \"**/*.{js,ts,tsx}\" --no-must-find-files",
-    "check": "bun run typecheck && bun run lint && bun run spellcheck"
+    "format-fix": "bun run dprint fmt",
+    "format-check": "bun run dprint check",
+    "type-check": "tsc --noEmit",
+    "spell-check": "cspell \"**/*.{js,ts,tsx}\" --no-must-find-files",
+    "ci-check": "bun run format-check && bun run type-check && bun run lint && bun run spell-check"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
@@ -38,14 +40,13 @@
     "the-new-css-reset": "^1.11.2"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "14.1.0",
+    "dprint": "^0.45.0",
     "@types/node": "20.2.5",
     "@types/react": "18.2.52",
     "@types/react-dom": "18.2.18",
     "cspell": "^8.3.2",
-    "@next/bundle-analyzer": "14.1.0",
-    "eslint": "8.56.0",
-    "eslint-config-next": "14.1.0",
-    "prettier-eslint-cli": "^8.0.1",
+    "oxlint": "^0.2.7",
     "typescript": "5.3.3"
   }
 }

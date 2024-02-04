@@ -1,6 +1,7 @@
 {
   "recommendations": [
-    "esbenp.prettier-vscode"
+    "dprint.dprint",
+    "oxc.oxc-vscode"
   ],
   "unwantedRecommendations": []
 }

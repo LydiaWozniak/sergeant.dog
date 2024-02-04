@@ -1,5 +1,5 @@
-import million from "million/compiler";
 import bundleAnalyzer from "@next/bundle-analyzer";
+import million from "million/compiler";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

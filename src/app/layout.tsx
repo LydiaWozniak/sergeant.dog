@@ -1,10 +1,10 @@
 import "./globals.css";
 import clsx from "clsx";
 import "the-new-css-reset/css/reset.css";
-import localFont from "next/font/local";
-import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -24,8 +24,7 @@ const brutalTypeFont = localFont({
 
 export const metadata = {
   title: "Braden Marshall",
-  description:
-    "Senior Software Engineer at Attio. Specialising in React Native development for mobile.",
+  description: "Senior Software Engineer at Attio. Specialising in React Native development for mobile.",
 };
 
 export default function RootLayout({
