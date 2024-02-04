@@ -1,18 +1,12 @@
 import bundleAnalyzer from "@next/bundle-analyzer";
-import million from "million/compiler";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
-};
-
-const millionConfig = {
-  auto: { rsc: true },
 };
 
 const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === "true",
 });
 
-export default withBundleAnalyzer(million.next(nextConfig, millionConfig));
+export default withBundleAnalyzer(nextConfig);
