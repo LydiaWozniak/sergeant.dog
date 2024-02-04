@@ -54,8 +54,8 @@
   color: var(--text-secondary);
   transition: color 0.3s ease-in-out;
 }
-.socialLink.twitter:hover {
-  color: var(--brand-twitter);
+.socialLink.x:hover {
+  color: var(--brand-x);
 }
 .socialLink.gitHub:hover {
   color: var(--text-link);

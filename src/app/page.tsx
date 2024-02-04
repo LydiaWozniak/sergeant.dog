@@ -14,19 +14,22 @@ export default function Home() {
           </p>
           <div className={styles.socialContainer}>
             <Link
-              href="https://twitter.com/SirBraden1996"
-              className={clsx(styles.socialLink, styles.twitter)}
+              href="https://x.com/SirBraden1996"
+              aria-label="Link to Braden's X profile."
+              className={clsx(styles.socialLink, styles.x)}
             >
-              <Icon icon="faTwitter" size="xl" />
+              <Icon icon="faXTwitter" size="xl" />
             </Link>
             <Link
               href="https://github.com/Braden1996"
+              aria-label="Link to Braden's GitHub profile."
               className={clsx(styles.socialLink, styles.gitHub)}
             >
               <Icon icon="faGithub" size="xl" />
             </Link>
             <Link
               href="https://www.linkedin.com/in/braden-marshall/"
+              aria-label="Link to Braden's LinkedIn profile."
               className={clsx(styles.socialLink, styles.linkedIn)}
             >
               <Icon icon="faLinkedin" size="xl" />
