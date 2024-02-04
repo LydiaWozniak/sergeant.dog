@@ -25,14 +25,19 @@ jobs:
         with:
           fetch-depth: 2
 
+      - name: Setup Bun package manager
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
       - name: Install dependencies
-        run: yarn install --immutable
+        run: bun install --frozen-lockfile
 
       - name: Typecheck
-        run: yarn run typecheck
+        run: bun run typecheck
 
       - name: Lint
-        run: yarn run lint
+        run: bun run lint
 
       - name: Spellcheck
-        run: yarn run spellcheck
+        run: bun run spellcheck

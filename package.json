@@ -12,16 +12,15 @@
   "bugs": {
     "url": "https://github.com/braden1996/bradenm.co.uk/issues"
   },
-  "packageManager": "yarn@3.4.1",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "prettier-eslint --list-different \"{src,types}/**/*.{js,ts,tsx}\" \"./next.config.js\"",
-    "lint-fix": "yarn run lint --write",
+    "lint-fix": "bun run lint --write",
     "typecheck": "tsc --noEmit",
     "spellcheck": "cspell \"**/*.{js,ts,tsx}\" --no-must-find-files",
-    "check": "yarn run typecheck && yarn run lint && yarn run spellcheck"
+    "check": "bun run typecheck && bun run lint && bun run spellcheck"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
