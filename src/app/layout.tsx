@@ -3,8 +3,8 @@ import clsx from "clsx";
 import "the-new-css-reset/css/reset.css";
 import localFont from "next/font/local";
 import { Inter } from "next/font/google";
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -41,7 +41,7 @@ export default function RootLayout({
       <body>
         {children}
         <Analytics />
-        <SpeedInsights/>
+        <SpeedInsights />
       </body>
     </html>
   );
