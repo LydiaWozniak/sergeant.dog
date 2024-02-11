@@ -3,12 +3,24 @@
 import React from "react";
 
 const FPS = 120;
+const SLOW_TICK_LENGTH = 1000 / FPS;
+
+function setFontsLoaded(mode: "fast" | "slow") {
+  document.documentElement.setAttribute("data-fonts-loaded", mode);
+}
 
 export function FontsLoaded() {
   React.useEffect(() => {
     const nativeFontsSupported = "fonts" in document;
     if (!nativeFontsSupported) {
-      document.documentElement.setAttribute("data-fonts-loaded", "fast");
+      setFontsLoaded("fast");
+
+      return;
+    }
+
+    const fontsAlreadyLoaded = document.fonts.status === "loaded";
+    if (fontsAlreadyLoaded) {
+      setFontsLoaded("fast");
 
       return;
     }
@@ -18,12 +30,12 @@ export function FontsLoaded() {
     const onLoadingDone = () => {
       const end = performance.now();
       const time = end - start;
-      const timeToLoad = time >= 1000 / FPS ? "slow" : "fast";
+      const isSlowTick = time >= SLOW_TICK_LENGTH;
 
-      document.documentElement.setAttribute("data-fonts-loaded", timeToLoad);
+      setFontsLoaded(isSlowTick ? "slow" : "fast");
     };
     const onLoadingError = () => {
-      document.documentElement.setAttribute("data-fonts-loaded", "fast");
+      setFontsLoaded("fast");
     };
 
     document.fonts.addEventListener("loadingdone", onLoadingDone);
