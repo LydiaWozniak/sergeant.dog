@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 export const interFont = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  preload: false,
 });
 
 // This font subset only includes the characters necessary to
@@ -12,6 +13,7 @@ export const interFont = Inter({
 export const brutalTypeFont = localFont({
   src: "../../public/fonts/BrutalType-Bold.FontimizeSubset.woff2",
   variable: "--font-brutal-type",
+  preload: false,
 });
 
 const FONT_FAMILY_REGEX = /'([^']+)'/g;
