@@ -6,7 +6,6 @@ import "./globals.css";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { JsEnabled } from "../providers/js-enabled";
 import { brutalTypeFont, interFont } from "../utils/fonts";
 
 config.autoAddCss = false;
@@ -27,7 +26,6 @@ export default function RootLayout({
       className={clsx(interFont.variable, brutalTypeFont.variable)}
     >
       <body>
-        <JsEnabled />
         {children}
         <Analytics />
         <SpeedInsights />
