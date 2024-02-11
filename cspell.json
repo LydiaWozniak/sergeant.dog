@@ -21,6 +21,8 @@
     "fontawesome",
     "Fontimize",
     "fortawesome",
+    "loadingdone",
+    "loadingerror",
     "noscript"
   ],
   "ignoreWords": []
