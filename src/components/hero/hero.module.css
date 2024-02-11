@@ -1,5 +1,5 @@
 .container {
-  /* opacity: 0; */
+  opacity: 0;
 }
 
 [data-fonts-loaded='slow'] .container, [data-fonts-loaded='fast'] .container {
