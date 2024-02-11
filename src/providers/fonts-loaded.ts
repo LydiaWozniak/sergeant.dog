@@ -2,12 +2,11 @@
 
 import React from "react";
 
-const nativeFontsSupported = "fonts" in document;
-
 const FPS = 120;
 
 export function FontsLoaded() {
   React.useEffect(() => {
+    const nativeFontsSupported = "fonts" in document;
     if (!nativeFontsSupported) {
       document.documentElement.setAttribute("data-fonts-loaded", "fast");
 
