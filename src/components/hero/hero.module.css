@@ -1,4 +1,4 @@
-.container {
+[data-js-enabled='true'] .container {
   opacity: 0;
 }
 
