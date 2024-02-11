@@ -1,6 +1,8 @@
 "use client";
 
+import { NextFontWithVariable } from "next/dist/compiled/@next/font";
 import React from "react";
+import { getSingleFontFamilyFromNextFont } from "../utils/fonts";
 
 const FPS = 120;
 const SLOW_TICK_LENGTH = 1000 / FPS;
@@ -9,7 +11,11 @@ function setFontsLoaded(mode: "fast" | "slow") {
   document.documentElement.setAttribute("data-fonts-loaded", mode);
 }
 
-export function FontsLoaded() {
+interface FontsLoadedProps {
+  fonts: NextFontWithVariable[];
+}
+
+export function FontsLoaded({ fonts }: FontsLoadedProps) {
   React.useEffect(() => {
     const nativeFontsSupported = "fonts" in document;
     if (!nativeFontsSupported) {
@@ -18,33 +24,23 @@ export function FontsLoaded() {
       return;
     }
 
-    const fontsAlreadyLoaded = document.fonts.status === "loaded";
-    if (fontsAlreadyLoaded) {
-      setFontsLoaded("fast");
+    async function run() {
+      const start = performance.now();
 
-      return;
-    }
+      const fontChecks = fonts.map(async (font) => {
+        const fontFamilyName = getSingleFontFamilyFromNextFont(font);
+        return await document.fonts.load(`1em ${fontFamilyName}`);
+      });
 
-    const start = performance.now();
+      await Promise.all(fontChecks);
 
-    const onLoadingDone = () => {
       const end = performance.now();
       const time = end - start;
       const isSlowTick = time >= SLOW_TICK_LENGTH;
-
       setFontsLoaded(isSlowTick ? "slow" : "fast");
-    };
-    const onLoadingError = () => {
-      setFontsLoaded("fast");
-    };
+    }
 
-    document.fonts.addEventListener("loadingdone", onLoadingDone);
-    document.fonts.addEventListener("loadingerror", onLoadingError);
-
-    return () => {
-      document.fonts.removeEventListener("loadingdone", onLoadingDone);
-      document.fonts.removeEventListener("loadingerror", onLoadingError);
-    };
+    run();
   }, []);
 
   return null;
