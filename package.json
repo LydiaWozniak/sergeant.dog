@@ -1,16 +1,16 @@
 {
-  "name": "bradenm.co.uk",
+  "name": "sergeant.dog",
   "version": "0.0.0",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/braden1996/bradenm.co.uk.git"
+    "url": "git+https://github.com/LydiaWozniak/sergeant.dog.git"
   },
   "author": "Braden Marshall <braden1996@hotmail.co.uk>",
   "license": "MIT",
-  "homepage": "https://github.com/braden1996/bradenm.co.uk",
+  "homepage": "https://github.com/LydiaWozniak/sergeant.dog",
   "bugs": {
-    "url": "https://github.com/braden1996/bradenm.co.uk/issues"
+    "url": "https://github.com/LydiaWozniak/sergeant.dog/issues"
   },
   "scripts": {
     "dev": "next dev --turbo",
