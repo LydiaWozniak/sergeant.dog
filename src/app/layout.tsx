@@ -11,8 +11,8 @@ import { brutalTypeFont, interFont } from "../utils/fonts";
 config.autoAddCss = false;
 
 export const metadata = {
-  title: "Braden Marshall",
-  description: "Senior Software Engineer at Attio. Specialising in React Native development for mobile.",
+  title: "Sergeant Dribbles",
+  description: "Sergeant is a newfoundland good boy, with a special affinity for dribbling.",
 };
 
 export default function RootLayout({
